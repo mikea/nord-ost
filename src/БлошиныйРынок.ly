@@ -18,18 +18,42 @@
     \chordsSetup
   }
 
-  \relative {
+  \relative c' {
     \relativeSetup
-    
+
     \tempo Moderato
 
-    r1 r1 r1 \time 5/4 r1 r4 \time 4/4 r1 r1 r1 r1 r1 r1 r1
+    << { \voiceOne s1 s1 s1 \time 5/4 s1 s4 \time 4/4 s1 s1 s1 s1 s1 s1 s1}
+      \new Voice { \voiceTwo 
+      c''8^(a e) c'^(b gis e) b'^(a e) 
+      a^(gis g e cis a) f'^(d a) f'^( e cis a) 
+      e'^( d e f g gis a c b^\fermata ) 
+      e e
+
+      e cis a g fis d' d d
+      d b g f e c' c c
+      c a f d b' gis e b
+      a'4 a,4 r2
+
+      e''8 cis a g fis d' d d
+      d b g f e c' c c
+      c a f d b' gis e b
+    }
+    >> \oneVoice
 
     % 1
     \mark \default
-    r1 r1 r1 
-    r2 r4 e'4
-    c e c e
+    
+    << { \voiceOne s1 s1 s1 r2 r4 e,4 c e }
+      \new Voice { \voiceTwo 
+      a4 c r c
+      r4 c8 f e4 c
+      a4 c r c
+      r4 e,8 dis d cis bis4
+      a
+      }
+    >> \oneVoice
+    c e
     a r4 r8 e g fis
     f4 e r2
     r2 r4 e

@@ -70,8 +70,11 @@
     r2 r4 \tuplet 3/2  { b'8 ais b } 
     e4 r16 b ais b d8 c b ais
     b8 e, dis e g fis e dis
-    e8 b r4 r8 b8 d cis
-    c4 r4 r4  \tuplet 3/2  { b'8 ais b } 
+    e8 b r4 r8 
+    << { \voiceOne b8 d cis c4}
+      \new Voice { \voiceTwo b8 d cis c4}
+    >> \oneVoice
+    r4 r4  \tuplet 3/2  { b'8 ais b } 
     
     % 1
     \mark \default
