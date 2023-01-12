@@ -11,7 +11,7 @@
 
 {
 
-\set Score.markFormatter = #format-mark-box-numbers
+\scoreSetup
 
 <<
   \chords {
