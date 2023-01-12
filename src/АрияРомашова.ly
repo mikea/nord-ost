@@ -1,12 +1,10 @@
 \version "2.22.0"
 
-\paper {
-  #(set-paper-size "letter")
-}
+\include "setup.ly"
 
 \header {
   title = "Ария Ромашова"
-  composer = "Иващенко, Васильев"
+  composer = "Г. Васильев, А. Иващенко"
 }
 
 \score {
