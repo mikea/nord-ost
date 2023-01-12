@@ -15,9 +15,12 @@
 
 <<
   \chords {
+    \chordsSetup
   }
 
   \relative {
+    \relativeSetup
+    
     \tempo Moderato
 
     r1 r1 r1 \time 5/4 r1 r4 \time 4/4 r1 r1 r1 r1 r1 r1 r1

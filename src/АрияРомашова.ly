@@ -15,6 +15,8 @@
 
 <<
   \chords {
+    \chordsSetup
+
     b1:7 e1:m fis2:7 f2:maj e1:m c1:7
     % 1
     e1:m fis2:7 f2:maj e1:m
@@ -61,6 +63,8 @@
   }
 
   \relative {
+    \relativeSetup 
+
     \tempo Moderato
     \key g \major
     r2 r4 \tuplet 3/2  { b'8 ais b } 
@@ -151,7 +155,7 @@
     r4 bes c cis
     d2 \tuplet 3/2 {bes4 c cis}
     d4 cis c b
-    bes2 e,2
+    bes2 ees,2
     r2 \tuplet 3/2 {bes'4 bes bes}
     ees,1
     r2 \tuplet 3/2 {bes'4 bes bes}
