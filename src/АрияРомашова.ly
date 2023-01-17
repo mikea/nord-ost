@@ -7,12 +7,7 @@
   composer = "Г. Васильев, А. Иващенко"
 }
 
-\score {
-
-{
-
-\scoreSetup
-
+\mkScore {
 <<
   \chords {
     \chordsSetup
@@ -81,7 +76,7 @@
     r4 r4  \tuplet 3/2  { b'8 ais b } 
     
     % 1
-    \mark \default
+    \mkMark
     e4 r16 b ais b d8 c b ais
     b8 e, dis e f e dis f
     e8 b' r4 r8
@@ -90,7 +85,7 @@
     >> \oneVoice
 
     % 2
-    \mark \default
+    \mkMark
     << { \voiceOne gis4}
       \new Voice { \voiceTwo gis4}
     >> \oneVoice
@@ -104,13 +99,13 @@
     bes2 r8 g, a ais
     
     % 3
-    \mark \default
+    \mkMark
     b8 e, fis e b' e, fis e
     bes' e, fis e g fis e c
     b1~ b2 r2
 
     % 4
-    \mark \default
+    \mkMark
     \tempo Allegro
     e8 fis g a b r b c
     d c b r b c d b
@@ -122,7 +117,7 @@
     \time 3/4 \xNote {e8} r e, fis g fis
 
     % 5
-    \mark \default
+    \mkMark
     \time 4/4 
     e4 
     << { \voiceOne r2.}
@@ -142,7 +137,7 @@
     
 
     % 6
-    \mark \default
+    \mkMark
     e2. dis4
     d2.
     g,4 b4 e,8 fis g fis e fis
@@ -160,7 +155,7 @@
     bes4 bes r c
 
     % 7
-    \mark \default
+    \mkMark
     f2. e4
     dis2. d4
     cis2. fis,4
@@ -171,7 +166,7 @@
     d1
 
     % 8
-    \mark \default
+    \mkMark
     \key bes \major
     g2 d2~
     d4 bes c cis
@@ -198,7 +193,7 @@
     r1
 
     % 9
-    \mark \default
+    \mkMark
     \key ees \major
     \tempo Allegro
     g4 g g8 aes g fis
@@ -226,7 +221,7 @@
     
 
     % 10
-    \mark \default
+    \mkMark
     ees''4 r4 \mkvOneThree{s4}{\grace {b'16 c d} ees4} \mkvOneTwo{d,}{b,}
     ees'4 r4  \mkvOneThree{s4}{\grace {b'16 c d} ees4} \mkvOneTwo{d,}{b,}
     \mkvOneTwo{\tuplet 3/2 {ees'4 f d} \tuplet 3/2 {ees4 f d}}{\tuplet 3/2 {c, d b} \tuplet 3/2 {c d b}}
@@ -246,7 +241,7 @@
     c'4 r r2
 
     % 11
-    \mark \default
+    \mkMark
     \key g \major
     e,8 fis g a b r b c
     d c b r b c d b
@@ -258,7 +253,7 @@
     \time 3/4 \xNote {e8 r e e e e}
 
     % 12
-    \mark \default
+    \mkMark
     \time 4/4 \xNote {e4} r r2
     r1
     r4 e,8 fis g fis e fis
@@ -273,7 +268,7 @@
     bes4 bes r2
 
     % 13
-    \mark \default
+    \mkMark
     \key aes \major
       <<
       {
@@ -415,6 +410,4 @@
   }
 >>
 
-} % Staff
-
-} % score
+} % mkScore

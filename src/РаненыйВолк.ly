@@ -45,7 +45,7 @@
 
 
     % 1
-    \mark \default
+    \mkMark
     \time 5/4
     
     \todo {
@@ -63,7 +63,7 @@
     }
 
     % 2
-    \mark \default
+    \mkMark
     \time 3/4
 
     r8 e f g f e

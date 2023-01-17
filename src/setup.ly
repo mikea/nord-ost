@@ -93,3 +93,27 @@ todo =
     }
   #}
 )
+
+mkScore =
+#(define-scheme-function 
+  (music)
+  (ly:music?)
+  #{
+    \score {
+      {
+        \scoreSetup
+        $music 
+      }
+    }
+  #}
+)
+
+mkMark =
+#(define-scheme-function 
+  ()
+  ()
+  #{
+    \mark \default
+    \set Score.currentBarNumber = #1
+  #}
+)

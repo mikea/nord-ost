@@ -25,9 +25,9 @@
 
     << { \voiceOne s1 s1 s1 \time 5/4 s1 s4 \time 4/4 s1 s1 s1 s1 s1 s1 s1}
       \new Voice { \voiceTwo 
-      c''8^(a e) c'^(b gis e) b'^(a e) 
-      a^(gis g e cis a) f'^(d a) f'^( e cis a) 
-      e'^( d e f g gis a c b^\fermata ) 
+      c''8 a e c' b gis e b' a e 
+      a gis g e cis a f' d a f'  e cis a 
+      e'  d e f g gis a c b^\fermata  
       e e
 
       e cis a g fis d' d d
@@ -42,7 +42,7 @@
     >> \oneVoice
 
     % 1
-    \mark \default
+    \mkMark
     
     << { \voiceOne s1 s1 s1 r2 r4 e,4 c e }
       \new Voice { \voiceTwo 
@@ -76,7 +76,7 @@
     r2 r4 e
 
     % 2
-    \mark \default
+    \mkMark
     cis4 e cis e
     a e r gis8 fis
     fis4 e r2
@@ -99,7 +99,7 @@
     r2 r4 e4
 
     % 3
-    \mark \default
+    \mkMark
     a4 gis b a8 cis8~
     cis4 r4 r4 e,
     a gis b a8 cis8~
@@ -126,7 +126,7 @@
     r2 r4 e4
 
     % 4
-    \mark \default
+    \mkMark
     \key c \major
     c e c e
     a e g4. fis8
@@ -151,7 +151,7 @@
     r2 r4 e
 
     % 5
-    \mark \default
+    \mkMark
     cis4 e cis e
     a e gis4. fis8
     fis4 e8 r8 r2
@@ -174,7 +174,7 @@
     r2 r4 e4
 
     % 6
-    \mark \default
+    \mkMark
     a4 gis b a8 cis8~
     cis4 r r e,
     a4 gis b a8 cis8~
@@ -193,7 +193,7 @@
     r1
 
     % 7 
-    \mark \default
+    \mkMark
     \key b \major
     r1 r1 r1 r1
     r1 r1 r1 r1
