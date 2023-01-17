@@ -40,13 +40,12 @@
     r8 cis d e d cis 
     fis4 b, fis'
 
-    fis b, fis'
-    fis b, fis'
-    fis b, fis'
-
-    
-    % TODO
-    \xNote { g4 g g }
+    \todo {
+      fis b, fis'
+      fis b, fis'
+      fis b, fis'
+      g4 g g 
+    }
     d' cis b 
     fis'2.~
 

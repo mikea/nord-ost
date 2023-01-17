@@ -78,3 +78,18 @@ mkvOneTwo =
   \oneVoice
   #}
 )
+
+todo =
+#(define-scheme-function 
+  (music)
+  (ly:music?)
+  #{
+    \xNote { 
+      \override NoteHead.color = #red
+      \override Stem.color = #red
+      $music 
+      \override NoteHead.color = #black
+      \override Stem.color = #black
+    }
+  #}
+)

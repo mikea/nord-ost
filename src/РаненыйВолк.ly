@@ -41,14 +41,14 @@
     c a f d b' gis e gis
     gis4 a r
 
-    \xNote { g4         
-    }
+    \todo { g4 }
 
 
     % 1
     \mark \default
     \time 5/4
-    \xNote {
+    
+    \todo {
         g4 g g g g
         g g g g g
 
