@@ -41,7 +41,7 @@ Track numbers from the official published version.
 |02-15|Встревоженное сердце|
 |03-01|Секретарши|
 |03-02|В приёмной|
-|03-03|[Раненый волк](pdf/%D0%A0%D0%B0%D0%BD%D0%B5%D0%BD%D1%8B%D0%B9%D0%92%D0%BE%D0%BB%D0%BA.pdf) |:heavy_check_mark: ?:question:|:heavy_check_mark:|
+|03-03|[Раненый волк](pdf/%D0%A0%D0%B0%D0%BD%D0%B5%D0%BD%D1%8B%D0%B9%D0%92%D0%BE%D0%BB%D0%BA.pdf) |:heavy_check_mark: :question:|:heavy_check_mark:|
 |03-04|Вокзал|
 |03-05|Это любовь|
 |03-06|Блокада|
