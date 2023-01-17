@@ -28,7 +28,7 @@
     e1:m7 e1:m7 cis1.:dim e2.:m7 
     e1:m7 e1:m7 cis:dim~ cis2.:dim
     % 5
-    e1:m e1:m e1:m e1:m e1:m e1:m
+    e1:m e1:m e1:m e1:m e1:m e2.:m b4:7
     % 6
     e1:m7 c:7/e e1:m7 c:7  e1:m7 c:7
     e1:m7 c:7/e e1:m7 c:7  e1:m7 c:7
@@ -59,7 +59,11 @@
     e:m7 c:7 e:m7 c:7
     e:m7 c:7/e e:m7 c:7 e:m7 c:7
     % 13
-    f:m
+    f:m f:m f:m f:m
+    des:7 des:7 des:7 des:7
+    f:m f:m f:m f:m
+    des:7 des:7 des:7 des:7
+    f:m f:m f:m f:m 
   }
 
   \relative {
@@ -80,13 +84,22 @@
     \mark \default
     e4 r16 b ais b d8 c b ais
     b8 e, dis e f e dis f
-    e8 b' r4 r8 e,8 fis g
+    e8 b' r4 r8
+    << { \voiceOne e,8 fis g}
+      \new Voice { \voiceTwo e8 fis g}
+    >> \oneVoice
 
     % 2
     \mark \default
-    gis4 r4 r4 r16 e16 fis16 gis16
-    a8 a c c a e fis e
-    a a c c fis, r r16 e g a 
+    << { \voiceOne gis4}
+      \new Voice { \voiceTwo gis4}
+    >> \oneVoice
+    r4 r4 r16 e16 fis16 gis16
+    a8 a c c a e 
+    << { \voiceOne fis e}
+      \new Voice { \voiceTwo gis, g}
+    >> \oneVoice
+    a' a c c fis, r \tuplet 3/2 { e g a } 
     \tuplet 3/2 { b4 e e } \tuplet 3/2 { g a g }
     bes2 r8 g, a ais
     
@@ -110,22 +123,36 @@
 
     % 5
     \mark \default
-    \time 4/4 e4 r2.
+    \time 4/4 
+    e4 
+    << { \voiceOne r2.}
+      \new Voice { \voiceTwo e8 fis g fis e r8}
+    >> \oneVoice
     r4 \xNote {g8 g g g g} r
-    r4 \xNote {g8 g g g g} r
+    r4 << { \voiceOne \xNote {g8 g g g g}}
+      \new Voice { \voiceTwo e8 fis g fis e}
+    >> \oneVoice
+    r8
     r2 \xNote {g8 g g g}
-    \xNote {g8} r8 r2.
-    r2. b4
+    << 
+      { \voiceOne \xNote {g8} s8 s2. s2.} 
+      \new Voice { \voiceTwo e4 ais, ais e' ais, ais e'}
+    >> \oneVoice
+    b'4 
+    
 
     % 6
     \mark \default
     e2. dis4
     d2.
     g,4 b4 e,8 fis g fis e fis
-    g4 g4 r2
-    r4 g8 a bes a g a 
-    bes4 bes r b
-    e2. dis4
+    g4 
+    \mkvOneThree { g4 r2 r4} { e'8 fis g fis e fis g e}
+    
+    g,8 a bes a g a 
+    bes4
+    \mkvOneThree { bes r b e2.} { g8 a bes a g a b g }
+    dis4
     d2. g,4
     b4 e,8 fis g fis e fis
     g4 g r2
@@ -157,11 +184,16 @@
     g2 r2
     r4 bes c cis
     d2 \tuplet 3/2 {bes4 c cis}
-    d4 cis c b
-    bes2 ees,2
+    << { \voiceOne d4 cis c b}
+      \new Voice { \voiceTwo g4 fis f e}
+    >> \oneVoice
+    bes'2 ees,2
     r2 \tuplet 3/2 {bes'4 bes bes}
     ees,1
-    r2 \tuplet 3/2 {bes'4 bes bes}
+    r2 
+    << { \voiceOne \tuplet 3/2 {bes'4 bes bes}}
+      \new Voice { \voiceTwo \tuplet 3/2 {ees, ees f}}
+    >> \oneVoice
     g4 r r2
     r1
 
@@ -181,33 +213,37 @@
     a4 a a8 bes a gis
     a4 a4 r2
     bes4 bes bes8 c bes a
-    bes4 r4 r2
+    bes4 r4 
+    << { \voiceOne r2}
+      \new Voice { \voiceTwo c,4 bis}
+    >> \oneVoice
 
-    c4 c c8 d c b
+    c'4 c c8 d c b
     c4 c r2
-    d4 ees f ees 
-    d ees f ees
-    d2 r4 d4
+    << { \voiceOne d4 ees f ees d ees f ees d2 r4 d4}
+      \new Voice { \voiceTwo b, c d c b c d c b g \tuplet 3/2 {g g g}}
+    >> \oneVoice
+    
 
     % 10
     \mark \default
-    ees4 r4 r d
-    ees4 r4 r d
+    ees''4 r4 \mkvOneThree{s4}{\grace {b'16 c d} ees4} \mkvOneTwo{d,}{b,}
+    ees'4 r4  \mkvOneThree{s4}{\grace {b'16 c d} ees4} \mkvOneTwo{d,}{b,}
+    \mkvOneTwo{\tuplet 3/2 {ees'4 f d} \tuplet 3/2 {ees4 f d}}{\tuplet 3/2 {c, d b} \tuplet 3/2 {c d b}}
+    ees'4 r4 r \mkvOneTwo{d}{b,}
+    c'4 r \mkvOneThree{s4}{\grace {e16 f g} a4} \mkvOneTwo{b,}{gis,}
+    c'4 r \mkvOneThree{s4}{\grace {e16 f g} a4} b,
+    \mkvOneTwo{\tuplet 3/2 {c d b} \tuplet 3/2 {c d b}}{\tuplet 3/2 {a, b gis} \tuplet 3/2 {a b gis}}
+    c'4 r r d
+    ees4 r4 \mkvOneThree{s4}{\grace {b'16 c d} ees4} d,
+    ees4 r4 \mkvOneThree{s4}{\grace {b'16 c d} ees4} d,
     \tuplet 3/2 {ees4 f d} \tuplet 3/2 {ees4 f d}
     ees4 r4 r d
-    c4 r r b
-    c r r b
-    \tuplet 3/2 {c d b} \tuplet 3/2 {c d b}
-    c4 r r d
-    ees4 r4 r4 d
-    ees4 r4 r4 d
-    \tuplet 3/2 {ees4 f d} \tuplet 3/2 {ees4 f d}
-    ees4 r4 r d
-    c4 r r b
-    c4 r r b
-    \tuplet 3/2 {c d b} \tuplet 3/2 {c d b}
-    \tuplet 3/2 {c d b} \tuplet 3/2 {c d b}
-    c4 r r2
+    c4 r \mkvOneThree{s4}{\grace {e16 f g} a4} b,
+    c4 r \mkvOneThree{s4}{\grace {e16 f g} a4} b,
+    \mkvOneTwo{\tuplet 3/2 {c d b} \tuplet 3/2 {c d b}}{\tuplet 3/2 {a, b gis} \tuplet 3/2 {a b gis}}
+    \mkvOneTwo{\tuplet 3/2 {c' d b} \tuplet 3/2 {c d b}}{\tuplet 3/2 {a, b gis} \tuplet 3/2 {a b gis}}
+    c'4 r r2
 
     % 11
     \mark \default
