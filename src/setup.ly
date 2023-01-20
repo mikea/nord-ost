@@ -87,9 +87,11 @@ todo =
     \xNote { 
       \override NoteHead.color = #red
       \override Stem.color = #red
+      \override Rest.color = #red
       $music 
       \override NoteHead.color = #black
       \override Stem.color = #black
+      \override Rest.color = #black
     }
   #}
 )

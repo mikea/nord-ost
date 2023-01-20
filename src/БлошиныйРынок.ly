@@ -23,8 +23,8 @@
 
     \tempo Moderato
 
-    << { \voiceOne s1 s1 s1 \time 5/4 s1 s4 \time 4/4 s1 s1 s1 s1 s1 s1 s1}
-      \new Voice { \voiceTwo 
+    \mkvOneThree { s1 s1 s1 \time 5/4 s1 s4 \time 4/4 s1 s1 s1 s1 s1 s1 s1}
+    { 
       c''8 a e c' b gis e b' a e 
       a gis g e cis a f' d a f'  e cis a 
       e'  d e f g gis a c b^\fermata  
@@ -39,7 +39,6 @@
       d b g f e c' c c
       c a f d b' gis e b
     }
-    >> \oneVoice
 
     % 1
     \mkMark

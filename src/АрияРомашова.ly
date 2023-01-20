@@ -270,9 +270,9 @@
     % 13
     \mkMark
     \key aes \major
-      <<
+
+    \mkvOneThree
       {
-        \voiceOne
         \xNote { 
           f'4~ f~ f f8 f8
           f4 r4 r2
@@ -296,10 +296,9 @@
           r1
         }
       }
-      \new Voice {
-        \voiceTwo
+      {
         f2 c2~
-        c4 aes8 aes bes4 b4
+        c4 aes bes4 b4
         c4 aes bes b
         c b bes a
         aes2 des,2~
@@ -308,7 +307,7 @@
         r2 r2
 
         f'2 c2~
-        c4 aes8 aes bes4 b4
+        c4 aes bes4 b4
         c4 aes bes b
         c b bes a
         aes2 des,2~
@@ -317,8 +316,6 @@
         r2  \tuplet 3/2 { aes'4 aes aes }
         f4 r2 r2
       }
-      >>
-      \oneVoice
 
     % \fine
     \bar "|."

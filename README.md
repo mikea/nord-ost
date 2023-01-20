@@ -7,11 +7,11 @@ It is very important for me personally and I want to preserve the music.
 
 Track numbers from the official published version.
 
-| Track No | Name | Melody | Lyrics | Chords | Arr.|
-|----------|------|--------|--------|--------|-----|
+| Track No | Name | Vocal | Lyrics | Chords | Orch. Melody | Arr. |
+|----------|------|-------|--------|--------|----|--|
 |01-01|Увертюра|
 |01-02|Гибель почтальона|
-|01-03|Пристань|
+|01-03|[Пристань](pdf/%D0%9F%D1%80%D0%B8%D1%81%D1%82%D0%B0%D0%BD%D1%8C.pdf)| :heavy_check_mark: | :heavy_check_mark: |
 |01-04|Московский скорый|
 |01-05|Арест отца|
 |01-06|Урок речи|
