@@ -1,7 +1,11 @@
 # Nord Ost
 
 This is my personal project to transcribe russian "Норд Ост" musical.
-It is very important for me personally and I want to preserve the music.
+It is very important for me and I would like to preserve the music.
+The progress is slow, contributions/corrections/fixes are welcome.
+
+All copyrights are by their holders. Files are for personal use.
+No distribution allowed.
 
 ## Contents
 
